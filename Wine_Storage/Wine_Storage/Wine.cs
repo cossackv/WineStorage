@@ -37,20 +37,22 @@ namespace Wine_Storage
     {
         public ABV alcoholByVolume { get; set; }
         public CropYear cropYear { get; set; }
+        public Color color { get; set; }
 
         public Wine()
         {
 
         }
-        public Wine(ABV abv, CropYear crop)
+        public Wine(ABV abv, CropYear crop, Color color)
         {
             alcoholByVolume = abv;
             cropYear = crop;
+            this.color = color;
         }
 
         public override string ToString()
         {
-            return $"ABV of Wine is {alcoholByVolume} and year of crop {cropYear}";
+            return $"ABV of Wine is {alcoholByVolume}. Year of crop {cropYear}. Color is {color}";
         }
     }
 }

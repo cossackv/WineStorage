@@ -27,6 +27,6 @@ namespace Wine_Storage
             return bottlesOfWine.GetEnumerator();
         }
 
-        
+        public Color GetColor() { return Color.White; }
     }
 }
