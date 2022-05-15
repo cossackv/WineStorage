@@ -15,19 +15,19 @@ namespace Wine_Storage
 
     public enum ABV
     {
-        LowABV,
-        Medium_LowABV,
-        MediumABV,
-        Medium_HighABV,
-        HighABV
+        LowABV = 5,
+        Medium_LowABV = 10,
+        MediumABV = 11,
+        Medium_HighABV = 14,
+        HighABV = 15
     }
     public enum CropYear
     {
-        Nineteen_Seventy_Six,
-        Nineteen_Eighty_Six,
-        Nineteen_Ninety_Seven,
-        Two_Thousand,
-        Two_Thousand_AND_Tenth,
+        Nineteen_Seventy_Six = 1976,
+        Nineteen_Eighty_Six = 1986,
+        Nineteen_Ninety_Seven = 1997,
+        Two_Thousand = 2000,
+        Two_Thousand_AND_Tenth = 2010,
 
     }
 

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 
 namespace Wine_Storage
 {
@@ -6,16 +8,37 @@ namespace Wine_Storage
     {
         static void Main(string[] args)
         {
-           WineStorage store = new WineStorage(new Wine[]
-           {
-               new Wine(ABV.LowABV, CropYear.Nineteen_Ninety_Seven, Color.Pink),
-               new Wine(ABV.HighABV, CropYear.Two_Thousand, Color.Red)
-           });
+            WineStorage bottleOfWine1 = new WineStorage();
 
-            foreach (var wine in store)
+
+            List<Wine> list = new List<Wine>()
             {
-                Console.WriteLine(wine);
-            }
+               new Wine(ABV.Medium_HighABV, CropYear.Two_Thousand, Color.White),
+               new Wine(ABV.Medium_LowABV, CropYear.Nineteen_Eighty_Six, Color.Red),
+               new Wine(ABV.LowABV, CropYear.Nineteen_Ninety_Seven, Color.Red)
+               
+            };
+
+
+
+            //var result = bottleOfWine1.GetColor(list, Color.Red);
+            //PrintToTerminal(result);
+
+            //var sort = bottleOfWine1.SortData(list);
+            //PrintToTerminal(sort);
+
+            var sortABV = bottleOfWine1.SortABV(list);
+            PrintToTerminal(sortABV);
+
+            //foreach (var wine in list)
+            //{
+            //    Console.WriteLine(wine);
+            //}
+        }
+
+        public static void PrintToTerminal(List<Wine> list)
+        {
+            Console.WriteLine(String.Join("\n", list));
         }
     }
 }
